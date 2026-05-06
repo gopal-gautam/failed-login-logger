@@ -1,0 +1,64 @@
+{
+    "name": "gopal-gautam/failed-login-logger",
+    "description": "A Laravel package that listens for failed authentication events and persists them to your database for auditing, brute-force detection and incident response.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "auth",
+        "login",
+        "security",
+        "audit",
+        "failed-login",
+        "logger",
+        "brute-force"
+    ],
+    "homepage": "https://github.com/gopal-gautam/failed-login-logger",
+    "support": {
+        "issues": "https://github.com/gopal-gautam/failed-login-logger/issues",
+        "source": "https://github.com/gopal-gautam/failed-login-logger"
+    },
+    "authors": [
+        {
+            "name": "Gopal Gautam",
+            "email": "11187799+gopal-gautam@users.noreply.github.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/auth": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/database": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/events": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^9.5|^10.5|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GG\\FailedLoginLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GG\\FailedLoginLogger\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GG\\FailedLoginLogger\\FailedLoginLoggerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}
